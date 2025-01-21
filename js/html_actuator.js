@@ -1,9 +1,9 @@
 function HTMLActuator() {
-  this.tileContainer    = document.querySelector(".tile-container");
-  this.scoreContainer   = document.querySelector(".score-container");
-  this.scorePoints      = document.querySelector(".score-points");
-  this.bestContainer    = document.querySelector(".best-container");
-  this.bestPoints       = document.querySelector(".best-points");
+  this.tileContainer = document.querySelector(".tile-container");
+  this.scoreContainer = document.querySelector(".score-container");
+  this.scorePoints = document.querySelector(".score-points");
+  this.bestContainer = document.querySelector(".best-container");
+  this.bestPoints = document.querySelector(".best-points");
   this.messageContainer = document.querySelector(".game-message");
   this.sharingContainer = document.querySelector(".score-sharing");
 
@@ -53,10 +53,10 @@ HTMLActuator.prototype.clearContainer = function (container) {
 HTMLActuator.prototype.addTile = function (tile) {
   var self = this;
 
-  var wrapper   = document.createElement("div");
-  var inner     = document.createElement("div");
-  var img       = document.createElement("img");
-  var position  = tile.previousPosition || { x: tile.x, y: tile.y };
+  var wrapper = document.createElement("div");
+  var inner = document.createElement("div");
+  var img = document.createElement("img");
+  var position = tile.previousPosition || { x: tile.x, y: tile.y };
   var positionClass = this.positionClass(position);
 
   // We can't use classlist because it somehow glitches when replacing classes
@@ -117,40 +117,40 @@ HTMLActuator.prototype.updateScore = function (score, points) {
 
   var difference = score - this.score;
   this.score = score;
-	var pointDifference = points - this.points;
-	this.points = points;
+  var pointDifference = points - this.points;
+  this.points = points;
 
   // this.scoreContainer.textContent = this.score;
-	this.scorePoints.textContent = this.points;
-  this.scoreContainer.textContent = Localize( "p" + this.score );
+  this.scorePoints.textContent = this.points;
+  this.scoreContainer.textContent = Localize("p" + this.score);
 
   if (difference > 0) {
     var addition = document.createElement("div");
     addition.classList.add("score-addition");
     // addition.textContent = "+" + difference;
-    addition.textContent = Localize( "p" + this.score );
+    addition.textContent = Localize("p" + this.score);
 
     this.scoreContainer.appendChild(addition);
   }
 
-	if (pointDifference > 0) {
-		var punti = document.createElement("div");
-		punti.classList.add("score-addition");
-		punti.textContent = "+" + pointDifference;
-		this.scorePoints.appendChild(punti);
-	}
+  if (pointDifference > 0) {
+    var punti = document.createElement("div");
+    punti.classList.add("score-addition");
+    punti.textContent = "+" + pointDifference;
+    this.scorePoints.appendChild(punti);
+  }
 };
 
 HTMLActuator.prototype.updateBestScore = function (bestScore, bestPoints) {
-  this.bestContainer.textContent = Localize( "p" + bestScore);
+  this.bestContainer.textContent = Localize("p" + bestScore);
   this.bestPoints.textContent = bestPoints;
 
-	// var difference = score - this.score;
-	// this.score = score;
+  // var difference = score - this.score;
+  // this.score = score;
 };
 
 HTMLActuator.prototype.message = function (won) {
-  var type    = won ? "game-won" : "game-over";
+  var type = won ? "game-won" : "game-over";
   var message = Localize(type);
 
   this.messageContainer.classList.add(type);
@@ -173,10 +173,10 @@ HTMLActuator.prototype.scoreTweetButton = function () {
   tweet.setAttribute("href", "https://twitter.com/share");
   tweet.setAttribute("data-via", "giampiex");
   tweet.setAttribute("data-url", "http://git.io/cupcakes");
-  tweet.setAttribute("data-counturl", "http://0x0800.github.io/2048-CUPCAKES");
+  tweet.setAttribute("data-counturl", "https://2048cupcakes.top/");
   tweet.textContent = "Tweet";
 
-  var text = Localize("tweet1") + Localize( this.score ).toUpperCase() + '", ' + this.points + " Kcal " + Localize("tweet2");
+  var text = Localize("tweet1") + Localize(this.score).toUpperCase() + '", ' + this.points + " Kcal " + Localize("tweet2");
   tweet.setAttribute("data-text", text);
 
   return tweet;
