@@ -1,136 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>2048 CUPCAKES</title>
-
-  <link href="style/main.css" rel="stylesheet" type="text/css">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport"
-    content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
-  <meta name="format-detection" content="telephone=no" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2048 Cupcakes - The Sweetest Puzzle Adventure</title>
+  <link rel="stylesheet" href="style/landing.css">
+  <meta name="description"
+    content="2048 Cupcakes - A delightful twist on the classic 2048 puzzle game. Merge adorable cupcakes, challenge your mind, and create the ultimate 2048 cupcake masterpiece!">
 </head>
 
 <body>
-  <div class="container">
-    <div class="heading">
-      <div class="title-container">
-        <h1 class="title">2048 <small>Cupcakes</small></h1>
+  <!-- Main hero section with split layout -->
+  <main class="hero-split">
+    <div class="content-left">
+      <h1>Welcome to 2048 Cupcakes!</h1>
+      <p class="tagline">The Sweetest Puzzle Adventure You'll Ever Play</p>
+
+      <div class="game-intro">
+        <p>Indulge your sweet tooth and challenge your mind with <strong>2048 Cupcakes</strong>, where every swipe
+          brings you closer to creating the ultimate dessert masterpiece!</p>
+        <p>Merge identical cupcakes, watch them transform, and strategize your way to the coveted 2048 cupcake. With
+          stunning visuals and addictive gameplay, <strong>2048 Cupcakes</strong> offers the perfect blend of strategy
+          and sweetness.</p>
       </div>
-      <div class="scores-container">
-        <div class="score-points">0</div>
-        <div class="best-points">0</div>
+
+      <div class="key-features">
+        <h2>Why Play 2048 Cupcakes?</h2>
+        <ul>
+          <li>🧁 Stunning cupcake designs that replace traditional numbers</li>
+          <li>🎮 Simple to learn, challenging to master</li>
+          <li>🏆 Addictive gameplay that keeps you coming back</li>
+          <li>✨ Satisfying animations and visual effects</li>
+        </ul>
       </div>
-      <div class="scores-container">
-        <div class="score-container">0 Kcal</div>
-        <div class="best-container">0 Kcal</div>
+
+      <div class="how-to-play">
+        <h2>How to Play</h2>
+        <ul>
+          <li>Use arrow keys or swipe to move cupcakes</li>
+          <li>Merge identical cupcakes to create higher-value treats</li>
+          <li>Plan your moves strategically</li>
+          <li>Aim for the ultimate 2048 cupcake!</li>
+        </ul>
       </div>
+
+      <a href="./games/2048-Cupcakes/index.html" class="play-button">Play 2048 Cupcakes Now!</a>
     </div>
 
-    <div class="above-game">
-      <p class="game-intro">Join tiles and destroy <strong>EMPIRE!</strong></p>
-      <a class="restart-button">New Game</a>
+    <div class="content-right">
+      <iframe src="./games/2048-Cupcakes/index.html" frameborder="0" class="game-preview"></iframe>
     </div>
+  </main>
 
-    <div class="game-container">
-      <div class="game-message">
-        <p></p>
-        <div class="lower">
-          <a class="keep-playing-button">Keep going</a>
-          <a class="retry-button">Retry</a>
-          <div class="score-sharing"></div>
-        </div>
+  <!-- Related Games -->
+  <section class="related-games">
+    <h2>More Sweet Adventures</h2>
+    <div class="game-grid">
+      <a href="#" class="game-card">
+        <img src="images/game1.jpg" alt="Classic 2048">
+        <h3>Classic 2048</h3>
+      </a>
+      <a href="#" class="game-card">
+        <img src="images/game2.jpg" alt="Candy Match">
+        <h3>Candy Match</h3>
+      </a>
+      <a href="#" class="game-card">
+        <img src="images/game3.jpg" alt="Sweet Puzzle">
+        <h3>Sweet Puzzle</h3>
+      </a>
+    </div>
+  </section>
+
+  <!-- Community Section -->
+  <section class="community">
+    <h2>Join the 2048 Cupcakes Community</h2>
+    <div class="stats">
+      <div class="stat-card">
+        <h3>1M+</h3>
+        <p>Players Worldwide</p>
       </div>
-
-      <div class="grid-container">
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
-        <div class="grid-row">
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-          <div class="grid-cell"></div>
-        </div>
+      <div class="stat-card">
+        <h3>4.8★</h3>
+        <p>Player Rating</p>
       </div>
-
-      <div class="tile-container">
-
+      <div class="stat-card">
+        <h3>Daily</h3>
+        <p>Challenges</p>
       </div>
     </div>
+  </section>
 
-    <p class="game-explanation">
-      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two
-      tiles with the same symbol touch, they <strong>get promoted!</strong>
-    </p>
-    <hr>
-    <p class="tile-legend"><strong class="important">Tile Legend:</strong></p>
-    <hr>
-    <p class="disclaimer">
-      <strong class="important">Note:</strong> This site <a href="http://git.io/cupcakes">git.io/cupcakes</a> is a
-      spin-off of the official version of <a href="http://git.io/2048">2048</a> created by <a
-        href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a>
-    </p>
-    <hr>
-    <p class="credits">
-      Cupcakes images by <a href="http://www.georgetowncupcake.com/"
-        title="Georgetown Cupcake | DC Cupcakes | About">Georgetown Cupcake</a>.
-    </p>
-    <p class="repo-link"><small>hosted on <a href="https://github.com/foolgry/2048-CUPCAKES">GitHub</a></small></p>
-  </div>
-
-  <script src="js/bind_polyfill.js"></script>
-  <script src="js/classlist_polyfill.js"></script>
-  <script src="js/animframe_polyfill.js"></script>
-  <script src="js/l10n.js"></script>
-  <script src="js/localization.js"></script>
-  <script src="js/keyboard_input_manager.js"></script>
-  <script src="js/html_actuator.js"></script>
-  <script src="js/grid.js"></script>
-  <script src="js/tile.js"></script>
-  <script src="js/local_storage_manager.js"></script>
-  <script src="js/game_manager.js"></script>
-  <script src="js/application.js"></script>
-  <script>
-    window.twttr = (function (d, s, id) {
-      var t, js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return; js = d.createElement(s); js.id = id;
-      js.src = "https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
-      return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
-    }(document, "script", "twitter-wjs"));
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-40QF8CHDDD"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-40QF8CHDDD');
-  </script>
-
-  </script>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>2048 Cupcakes</h3>
+        <p>The sweetest puzzle adventure</p>
+      </div>
+      <nav class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact Us</a>
+      </nav>
+      <div class="social-links">
+        <a href="#">Twitter</a>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+      </div>
+      <p class="copyright">© 2024 2048 Cupcakes. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 
 </html>
