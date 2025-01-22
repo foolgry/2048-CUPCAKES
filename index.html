@@ -4,99 +4,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2048 Cupcakes - The Sweetest Puzzle Adventure</title>
+  <title>2048 Cupcakes - The Ultimate Sweet Puzzle Adventure Game</title>
   <link rel="stylesheet" href="style/landing.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://2048cupcakes.top/index.html" />
+
+  <!-- Social Media Meta Tags -->
+  <meta property="og:title" content="2048 Cupcakes - The Ultimate Sweet Puzzle Adventure Game" />
+  <meta property="og:description"
+    content="Play 2048 Cupcakes - The sweetest version of 2048! Merge delicious cupcakes, create amazing combinations, and reach the ultimate 2048 cupcake." />
+  <meta property="og:image" content="https://2048cupcakes.top/images/cupcake-logo.png" />
+  <meta property="og:url" content="https://2048cupcakes.top/index.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="2048 Cupcakes - The Ultimate Sweet Puzzle Adventure Game" />
+  <meta name="twitter:description"
+    content="Play 2048 Cupcakes - The sweetest version of 2048! Merge delicious cupcakes, create amazing combinations, and reach the ultimate 2048 cupcake." />
+  <meta name="twitter:image" content="https://2048cupcakes.top/images/cupcake-logo.png" />
+
+  <!-- 缩短meta description到推荐长度 -->
   <meta name="description"
-    content="2048 Cupcakes - A delightful twist on the classic 2048 puzzle game. Merge adorable cupcakes, challenge your mind, and create the ultimate 2048 cupcake masterpiece!">
+    content="Play 2048 Cupcakes - The sweetest version of 2048! Merge delicious cupcakes and reach the ultimate 2048 tile in this addictive puzzle game. Start playing now!">
 </head>
 
 <body>
   <!-- Main hero section with split layout -->
   <main class="hero-split">
     <div class="content-left">
-      <h1>Welcome to 2048 Cupcakes!</h1>
-      <p class="tagline">The Sweetest Puzzle Adventure You'll Ever Play</p>
-
-      <div class="game-intro">
-        <p>Indulge your sweet tooth and challenge your mind with <strong>2048 Cupcakes</strong>, where every swipe
-          brings you closer to creating the ultimate dessert masterpiece!</p>
-        <p>Merge identical cupcakes, watch them transform, and strategize your way to the coveted 2048 cupcake. With
-          stunning visuals and addictive gameplay, <strong>2048 Cupcakes</strong> offers the perfect blend of strategy
-          and sweetness.</p>
+      <div class="game-wrapper">
+        <iframe src="./games/2048-Cupcakes/index.html" frameborder="0" class="game-preview" id="gameIframe"></iframe>
+        <div class="game-overlay">
+          <button class="play-full" onclick="toggleFullScreen()">Play Full Screen</button>
+        </div>
       </div>
-
-      <div class="key-features">
-        <h2>Why Play 2048 Cupcakes?</h2>
-        <ul>
-          <li>🧁 Stunning cupcake designs that replace traditional numbers</li>
-          <li>🎮 Simple to learn, challenging to master</li>
-          <li>🏆 Addictive gameplay that keeps you coming back</li>
-          <li>✨ Satisfying animations and visual effects</li>
-        </ul>
-      </div>
-
-      <div class="how-to-play">
-        <h2>How to Play</h2>
-        <ul>
-          <li>Use arrow keys or swipe to move cupcakes</li>
-          <li>Merge identical cupcakes to create higher-value treats</li>
-          <li>Plan your moves strategically</li>
-          <li>Aim for the ultimate 2048 cupcake!</li>
-        </ul>
-      </div>
-
-      <a href="./games/2048-Cupcakes/index.html" class="play-button">Play 2048 Cupcakes Now!</a>
     </div>
 
     <div class="content-right">
-      <iframe src="./games/2048-Cupcakes/index.html" frameborder="0" class="game-preview"></iframe>
+      <div class="brand">
+        <img src="images/cupcake-logo.png" alt="2048 Cupcakes Logo" class="logo">
+        <h1>2048 Cupcakes</h1>
+      </div>
+
+      <div class="hero-content">
+        <h2>The Sweetest Puzzle Adventure</h2>
+        <p class="featured-text">Experience <strong>2048 Cupcakes</strong>, where delightful treats meet strategic
+          gameplay! Unlike the original 2048, our <strong>2048 Cupcakes</strong> version transforms numbers into
+          mouth-watering cupcakes, making your puzzle-solving experience sweeter than ever.</p>
+
+        <div class="cta-buttons">
+          <a href="./games/2048-Cupcakes/index.html" class="play-button primary">Play 2048 Cupcakes Now!</a>
+          <a href="#learn-more" class="play-button secondary">Learn More</a>
+        </div>
+
+        <div class="quick-stats">
+          <div class="stat">
+            <span class="number">1M+</span>
+            <span class="label">Players enjoying 2048 Cupcakes</span>
+          </div>
+          <div class="stat">
+            <span class="number">4.9★</span>
+            <span class="label">Player Rating</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-features">
+        <h2>Why Players Love 2048 Cupcakes</h2> <!-- 将h3改为h2 -->
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="icon">🧁</div>
+            <h4>Sweet Visuals</h4>
+            <p>Enjoy beautiful cupcake designs in 2048 Cupcakes, making every merge delightful</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon">🎮</div>
+            <h4>Addictive Gameplay</h4>
+            <p>The classic 2048 mechanics you love, reimagined with delicious cupcakes</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon">🏆</div>
+            <h4>Daily Challenges</h4>
+            <p>New 2048 Cupcakes challenges every day to test your skills</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon">🌟</div>
+            <h4>Special Combinations</h4>
+            <p>Discover unique cupcake combinations exclusive to 2048 Cupcakes</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="how-to-play">
+        <h2>Master 2048 Cupcakes</h2> <!-- 将h3改为h2 -->
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <p>Swipe to move cupcakes across the board</p>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <p>Merge identical cupcakes to create better ones</p>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <p>Plan your moves to reach the 2048 cupcake</p>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
-  <!-- Related Games -->
-  <section class="related-games">
-    <h2>More Sweet Adventures</h2>
-    <div class="game-grid">
-      <a href="#" class="game-card">
-        <img src="images/game1.jpg" alt="Classic 2048">
-        <h3>Classic 2048</h3>
-      </a>
-      <a href="#" class="game-card">
-        <img src="images/game2.jpg" alt="Candy Match">
-        <h3>Candy Match</h3>
-      </a>
-      <a href="#" class="game-card">
-        <img src="images/game3.jpg" alt="Sweet Puzzle">
-        <h3>Sweet Puzzle</h3>
-      </a>
-    </div>
-  </section>
-
-  <!-- Community Section -->
-  <section class="community">
-    <h2>Join the 2048 Cupcakes Community</h2>
-    <div class="stats">
-      <div class="stat-card">
-        <h3>1M+</h3>
-        <p>Players Worldwide</p>
-      </div>
-      <div class="stat-card">
-        <h3>4.8★</h3>
-        <p>Player Rating</p>
-      </div>
-      <div class="stat-card">
-        <h3>Daily</h3>
-        <p>Challenges</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <div class="footer-brand">
-        <h3>2048 Cupcakes</h3>
-        <p>The sweetest puzzle adventure</p>
+        <h2>2048 Cupcakes</h2> <!-- 将h3改为h2 -->
+        <p>The sweetest puzzle game ever!</p>
       </div>
       <nav class="footer-links">
         <a href="#">Privacy Policy</a>
@@ -104,13 +125,37 @@
         <a href="#">Contact Us</a>
       </nav>
       <div class="social-links">
-        <a href="#">Twitter</a>
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
+        <a href="#" class="social-icon">Twitter</a>
+        <a href="#" class="social-icon">Facebook</a>
+        <a href="#" class="social-icon">Instagram</a>
       </div>
       <p class="copyright">© 2024 2048 Cupcakes. All rights reserved.</p>
     </div>
   </footer>
+  
+  <script>
+    function toggleFullScreen() {
+      const iframe = document.getElementById('gameIframe');
+      
+      if (!document.fullscreenElement) {
+        if (iframe.requestFullscreen) {
+          iframe.requestFullscreen();
+        } else if (iframe.webkitRequestFullscreen) { // Safari
+          iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) { // IE11
+          iframe.msRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) { // Safari
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { // IE11
+          document.msExitFullscreen();
+        }
+      }
+    }
+  </script>
 </body>
 
 </html>
