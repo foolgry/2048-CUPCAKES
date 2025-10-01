@@ -72,6 +72,12 @@ HTMLActuator.prototype.addTile = function (tile) {
   img.src = "style/img/" + tile.value + ".jpg";
   inner.appendChild(img);
 
+  // Add number label to show the tile value
+  var numberLabel = document.createElement("div");
+  numberLabel.classList.add("tile-number");
+  numberLabel.textContent = tile.value;
+  inner.appendChild(numberLabel);
+
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first
     window.requestAnimationFrame(function () {

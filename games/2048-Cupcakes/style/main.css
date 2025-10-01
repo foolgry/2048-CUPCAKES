@@ -344,10 +344,25 @@ hr {
     text-align: center;
     font-weight: bold;
     z-index: 10;
-    font-size: 55px; }
+    font-size: 55px;
+    position: relative; }
     .tile .tile-inner img {
       width: 100%;
       height: 100%; }
+    .tile .tile-inner .tile-number {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 2px 4px;
+      border-radius: 3px;
+      z-index: 15;
+      line-height: 1;
+      min-width: 18px;
+      text-align: center; }
   .tile.tile-2 .tile-inner {
     background: white;
     box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
@@ -375,48 +390,72 @@ hr {
     background: #9a81ab;
     box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
     font-size: 45px; }
+    .tile.tile-128 .tile-inner .tile-number {
+      font-size: 12px; }
     @media screen and (max-width: 520px) {
       .tile.tile-128 .tile-inner {
-        font-size: 25px; } }
+        font-size: 25px; }
+      .tile.tile-128 .tile-inner .tile-number {
+        font-size: 10px; } }
   .tile.tile-256 .tile-inner {
     color: white;
     background: #8a6c9d;
     box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
     font-size: 45px; }
+    .tile.tile-256 .tile-inner .tile-number {
+      font-size: 12px; }
     @media screen and (max-width: 520px) {
       .tile.tile-256 .tile-inner {
-        font-size: 25px; } }
+        font-size: 25px; }
+      .tile.tile-256 .tile-inner .tile-number {
+        font-size: 10px; } }
   .tile.tile-512 .tile-inner {
     color: white;
     background: #79578f;
     box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
     font-size: 45px; }
+    .tile.tile-512 .tile-inner .tile-number {
+      font-size: 11px; }
     @media screen and (max-width: 520px) {
       .tile.tile-512 .tile-inner {
-        font-size: 25px; } }
+        font-size: 25px; }
+      .tile.tile-512 .tile-inner .tile-number {
+        font-size: 9px; } }
   .tile.tile-1024 .tile-inner {
     color: white;
     background: #684281;
     box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
     font-size: 35px; }
+    .tile.tile-1024 .tile-inner .tile-number {
+      font-size: 10px; }
     @media screen and (max-width: 520px) {
       .tile.tile-1024 .tile-inner {
-        font-size: 15px; } }
+        font-size: 15px; }
+      .tile.tile-1024 .tile-inner .tile-number {
+        font-size: 8px; } }
   .tile.tile-2048 .tile-inner {
     color: white;
     background: #582e74;
     box-shadow: 0 0 30px 10px rgba(0, 0, 255, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
     font-size: 35px; }
+    .tile.tile-2048 .tile-inner .tile-number {
+      font-size: 10px; }
     @media screen and (max-width: 520px) {
       .tile.tile-2048 .tile-inner {
-        font-size: 15px; } }
+        font-size: 15px; }
+      .tile.tile-2048 .tile-inner .tile-number {
+        font-size: 8px; } }
   .tile.tile-super .tile-inner {
     color: white;
     background: #343236;
     font-size: 30px; }
+    .tile.tile-super .tile-inner .tile-number {
+      font-size: 9px; }
     @media screen and (max-width: 520px) {
       .tile.tile-super .tile-inner {
-        font-size: 10px; } }
+        font-size: 10px; }
+      .tile.tile-super .tile-inner .tile-number {
+        font-size: 7px; } }
 
 @-webkit-keyframes appear {
   0% {
@@ -752,6 +791,12 @@ hr {
 
   .tile .tile-inner {
     font-size: 35px; }
+    .tile .tile-inner .tile-number {
+      font-size: 10px;
+      bottom: 1px;
+      right: 1px;
+      padding: 1px 2px;
+      min-width: 14px; }
 
   .game-message p {
     font-size: 30px !important;
