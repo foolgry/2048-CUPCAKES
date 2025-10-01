@@ -120,23 +120,270 @@
         <p>The sweetest puzzle game ever!</p>
       </div>
       <nav class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Contact Us</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+        <a href="contact-us.html">Contact Us</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+        <a href="about-us.html">About Us</a>
       </nav>
-      <div class="social-links">
-        <a href="#" class="social-icon">Twitter</a>
-        <a href="#" class="social-icon">Facebook</a>
-        <a href="#" class="social-icon">Instagram</a>
-      </div>
-      <p class="copyright">© 2024 2048 Cupcakes. All rights reserved.</p>
+        <p class="copyright">© 2025 2048 Cupcakes. All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- GDPR Cookie Consent Banner -->
+  <div id="cookieConsent" class="cookie-consent-banner">
+    <div class="cookie-content">
+      <div class="cookie-message">
+        <h3>🍪 Cookie Notice</h3>
+        <p>We use cookies to enhance your experience, analyze site traffic, and personalize content. By continuing to use our site, you agree to our use of cookies. Learn more in our <a href="cookie-policy.html">Cookie Policy</a>.</p>
+      </div>
+      <div class="cookie-buttons">
+        <button class="cookie-btn accept" onclick="acceptAllCookies()">Accept All</button>
+        <button class="cookie-btn reject" onclick="rejectNonEssentialCookies()">Reject Non-Essential</button>
+        <button class="cookie-btn settings" onclick="showCookieSettings()">Settings</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cookie Settings Modal -->
+  <div id="cookieSettingsModal" class="cookie-modal">
+    <div class="cookie-modal-content">
+      <div class="cookie-modal-header">
+        <h3>Cookie Preferences</h3>
+        <button class="close-modal" onclick="closeCookieSettings()">&times;</button>
+      </div>
+      <div class="cookie-modal-body">
+        <div class="cookie-category">
+          <h4>🔒 Essential Cookies</h4>
+          <p>Required for basic website functionality. Cannot be disabled.</p>
+          <label class="toggle">
+            <input type="checkbox" checked disabled>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="cookie-category">
+          <h4>📊 Performance Cookies</h4>
+          <p>Help us understand how visitors interact with our website.</p>
+          <label class="toggle">
+            <input type="checkbox" id="performanceCookies" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="cookie-category">
+          <h4>🎯 Advertising Cookies</h4>
+          <p>Used to display relevant advertisements through Google AdSense.</p>
+          <label class="toggle">
+            <input type="checkbox" id="advertisingCookies" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="cookie-category">
+          <h4>🔧 Functional Cookies</h4>
+          <p>Enable enhanced functionality and personalization.</p>
+          <label class="toggle">
+            <input type="checkbox" id="functionalCookies" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+      <div class="cookie-modal-footer">
+        <button class="cookie-btn save" onclick="saveCookieSettings()">Save Preferences</button>
+        <button class="cookie-btn accept-all" onclick="acceptAllCookiesFromModal()">Accept All</button>
+      </div>
+    </div>
+  </div>
+
   <script>
+    // Cookie Consent Management
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    function setCookie(name, value, days) {
+      const date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      const expires = `expires=${date.toUTCString()}`;
+      document.cookie = `${name}=${value};${expires};path=/;SameSite=Lax`;
+    }
+
+    function checkCookieConsent() {
+      const consent = getCookie('cookieconsent_status');
+      if (!consent) {
+        document.getElementById('cookieConsent').style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+      } else {
+        // Apply saved cookie preferences
+        applyCookiePreferences(consent);
+      }
+    }
+
+    function acceptAllCookies() {
+      setCookie('cookieconsent_status', 'accept', 365);
+      setCookie('performance_cookies', 'true', 365);
+      setCookie('advertising_cookies', 'true', 365);
+      setCookie('functional_cookies', 'true', 365);
+
+      document.getElementById('cookieConsent').style.display = 'none';
+      document.body.style.overflow = 'auto';
+
+      // Enable all cookie-based features
+      enableAllCookieFeatures();
+
+      // Load Google Analytics if accepted
+      loadGoogleAnalytics();
+    }
+
+    function rejectNonEssentialCookies() {
+      setCookie('cookieconsent_status', 'reject', 365);
+      setCookie('performance_cookies', 'false', 365);
+      setCookie('advertising_cookies', 'false', 365);
+      setCookie('functional_cookies', 'false', 365);
+
+      document.getElementById('cookieConsent').style.display = 'none';
+      document.body.style.overflow = 'auto';
+
+      // Disable non-essential cookie features
+      disableNonEssentialCookies();
+    }
+
+    function showCookieSettings() {
+      document.getElementById('cookieSettingsModal').style.display = 'block';
+    }
+
+    function closeCookieSettings() {
+      document.getElementById('cookieSettingsModal').style.display = 'none';
+    }
+
+    function saveCookieSettings() {
+      const performance = document.getElementById('performanceCookies').checked;
+      const advertising = document.getElementById('advertisingCookies').checked;
+      const functional = document.getElementById('functionalCookies').checked;
+
+      setCookie('cookieconsent_status', 'custom', 365);
+      setCookie('performance_cookies', performance.toString(), 365);
+      setCookie('advertising_cookies', advertising.toString(), 365);
+      setCookie('functional_cookies', functional.toString(), 365);
+
+      document.getElementById('cookieConsent').style.display = 'none';
+      document.getElementById('cookieSettingsModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+
+      // Apply custom preferences
+      applyCustomCookiePreferences(performance, advertising, functional);
+    }
+
+    function acceptAllCookiesFromModal() {
+      document.getElementById('performanceCookies').checked = true;
+      document.getElementById('advertisingCookies').checked = true;
+      document.getElementById('functionalCookies').checked = true;
+      acceptAllCookies();
+      closeCookieSettings();
+    }
+
+    function applyCookiePreferences(consent) {
+      if (consent === 'accept') {
+        enableAllCookieFeatures();
+        loadGoogleAnalytics();
+      } else if (consent === 'reject') {
+        disableNonEssentialCookies();
+      } else if (consent === 'custom') {
+        const performance = getCookie('performance_cookies') === 'true';
+        const advertising = getCookie('advertising_cookies') === 'true';
+        const functional = getCookie('functional_cookies') === 'true';
+        applyCustomCookiePreferences(performance, advertising, functional);
+      }
+    }
+
+    function enableAllCookieFeatures() {
+      // Enable all features that use cookies
+      console.log('All cookie features enabled');
+    }
+
+    function disableNonEssentialCookies() {
+      // Disable non-essential cookie features
+      console.log('Non-essential cookies disabled');
+      // Disable Google Analytics
+      if (window.gtag) {
+        window.gtag('config', 'GA_MEASUREMENT_ID', {
+          'anonymize_ip': true,
+          'allow_google_signals': false
+        });
+      }
+    }
+
+    function applyCustomCookiePreferences(performance, advertising, functional) {
+      if (performance) {
+        loadGoogleAnalytics();
+      }
+      console.log('Custom cookie preferences applied:', { performance, advertising, functional });
+    }
+
+    function loadGoogleAnalytics() {
+      // Google Analytics would be loaded here
+      console.log('Google Analytics loaded');
+    }
+
+    // Initialize cookie consent on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      checkCookieConsent();
+      optimizeMobileExperience();
+    });
+
+    // 移动端体验优化
+    function optimizeMobileExperience() {
+      if (isMobileDevice()) {
+        // 防止双击缩放
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+          const now = (new Date()).getTime();
+          if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+          }
+          lastTouchEnd = now;
+        }, false);
+
+        // 优化游戏iframe的触摸体验
+        const iframe = document.getElementById('gameIframe');
+        iframe.style.touchAction = 'pan-y pinch-zoom';
+
+        // 添加移动端友好的hover效果
+        const buttons = document.querySelectorAll('.play-button, .play-full, .feature-card');
+        buttons.forEach(button => {
+          button.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.98)';
+          });
+
+          button.addEventListener('touchend', function() {
+            this.style.transform = 'scale(1)';
+          });
+        });
+
+        // 自动隐藏地址栏（iOS Safari）
+        window.addEventListener('load', function() {
+          setTimeout(function() {
+            window.scrollTo(0, 1);
+          }, 100);
+        });
+      }
+    }
+
+    function isMobileDevice() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+             (window.innerWidth <= 768 && 'ontouchstart' in window);
+    }
+
     function toggleFullScreen() {
       const iframe = document.getElementById('gameIframe');
 
+      // 如果是移动设备，使用替代方案
+      if (isMobileDevice()) {
+        toggleMobileFullscreen();
+        return;
+      }
+
+      // 桌面端全屏逻辑
       if (!document.fullscreenElement) {
         if (iframe.requestFullscreen) {
           iframe.requestFullscreen();
@@ -153,6 +400,29 @@
         } else if (document.msExitFullscreen) { // IE11
           document.msExitFullscreen();
         }
+      }
+    }
+
+    function toggleMobileFullscreen() {
+      const gameWrapper = document.querySelector('.game-wrapper');
+      const iframe = document.getElementById('gameIframe');
+      const overlay = document.querySelector('.game-overlay');
+      const button = document.querySelector('.play-full');
+
+      if (gameWrapper.classList.contains('mobile-fullscreen')) {
+        // 退出移动端全屏
+        gameWrapper.classList.remove('mobile-fullscreen');
+        button.textContent = 'Play Full Screen';
+        // 恢复页面滚动
+        document.body.style.overflow = 'auto';
+      } else {
+        // 进入移动端全屏
+        gameWrapper.classList.add('mobile-fullscreen');
+        button.textContent = 'Exit Full Screen';
+        // 禁止页面滚动
+        document.body.style.overflow = 'hidden';
+        // 滚动到游戏区域
+        gameWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
   </script>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - 2048 Cupcakes</title>
+  <meta name="description" content="Contact the 2048 Cupcakes team. Get in touch with us for feedback, support, or inquiries about our online puzzle game.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://2048cupcakes.top/contact-us.html" />
+  <link rel="stylesheet" href="style/landing.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .contact-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: var(--card-background);
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .contact-container h1 {
+      color: var(--primary-color);
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    .contact-container h2 {
+      color: var(--secondary-color);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    .contact-container p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+    }
+    .back-button {
+      display: inline-block;
+      margin: 1rem 0;
+      padding: 0.8rem 1.5rem;
+      background: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .back-button:hover {
+      background: var(--accent-color);
+      transform: translateY(-2px);
+    }
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .contact-card {
+      background: linear-gradient(135deg, var(--background-color) 0%, #fff 100%);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .contact-card:hover {
+      transform: translateY(-2px);
+    }
+    .contact-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .contact-card p {
+      margin: 0.5rem 0;
+    }
+    .contact-card a {
+      color: var(--secondary-color);
+      text-decoration: none;
+    }
+    .contact-card a:hover {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+    .contact-form {
+      background: linear-gradient(135deg, var(--background-color) 0%, #fff 100%);
+      padding: 2rem;
+      border-radius: 10px;
+      margin: 2rem 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--text-color);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      transition: border-color 0.3s ease;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    .submit-button {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+    .submit-button:hover {
+      background: var(--accent-color);
+      transform: translateY(-2px);
+    }
+    .faq-section {
+      margin: 2rem 0;
+    }
+    .faq-item {
+      background: #f8f9fa;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 1rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .faq-question:hover {
+      background: #e9ecef;
+    }
+    .faq-answer {
+      padding: 1rem;
+      display: none;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+      .response-message {
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+      display: none;
+    }
+    .success-message {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    .error-message {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-container">
+    <a href="index.html" class="back-button">← Back to Game</a>
+
+    <h1>Contact Us</h1>
+
+    <p>We'd love to hear from you! Whether you have feedback about our 2048 Cupcakes game, need technical support, or just want to say hello, we're here to help.</p>
+
+    <div class="contact-info">
+      <div class="contact-card">
+        <h3>📧 General Inquiries</h3>
+        <p>Email: <a href="mailto:hello@2048cupcakes.top">hello@2048cupcakes.top</a></p>
+        <p>We typically respond within 24-48 hours.</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>🎮 Game Support</h3>
+        <p>Email: <a href="mailto:support@2048cupcakes.top">support@2048cupcakes.top</a></p>
+        <p>For technical issues and bug reports.</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>🤝 Business & Partnerships</h3>
+        <p>Email: <a href="mailto:business@2048cupcakes.top">business@2048cupcakes.top</a></p>
+        <p>For advertising and collaboration opportunities.</p>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="name">Your Name *</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject *</label>
+          <select id="subject" name="subject" required>
+            <option value="">Select a subject</option>
+            <option value="general">General Inquiry</option>
+            <option value="feedback">Game Feedback</option>
+            <option value="bug">Bug Report</option>
+            <option value="feature">Feature Request</option>
+            <option value="business">Business Partnership</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" required placeholder="Tell us what's on your mind..."></textarea>
+        </div>
+
+        <div id="responseMessage" class="response-message"></div>
+
+        <button type="submit" class="submit-button">Send Message</button>
+      </form>
+    </div>
+
+    <div class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-question">🎮 How do I play 2048 Cupcakes?</div>
+        <div class="faq-answer">
+          Use arrow keys to move cupcakes. When two identical cupcakes touch, they merge into one with double the value. The goal is to create the 2048 cupcake!
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-question">📱 Is the game available on mobile devices?</div>
+        <div class="faq-answer">
+          Yes! 2048 Cupcakes is optimized for both desktop and mobile devices. You can play on any modern web browser.
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-question">💾 Can I save my game progress?</div>
+        <div class="faq-answer">
+          Your game progress is automatically saved in your browser's local storage. However, clearing your browser data will reset your progress.
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-question">🐛 I found a bug! How do I report it?</div>
+        <div class="faq-answer">
+          Please email us at <a href="mailto:support@2048cupcakes.top">support@2048cupcakes.top</a> with details about the bug, including your browser and device information.
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-question">🔒 Is my data safe?</div>
+        <div class="faq-answer">
+          Absolutely! We only collect minimal data needed to improve your gaming experience. Read our <a href="privacy-policy.html">Privacy Policy</a> for more details.
+        </div>
+      </div>
+    </div>
+
+  
+    <a href="index.html" class="back-button">← Back to Game</a>
+  </div>
+
+  <script>
+    function toggleFAQ(element) {
+      element.classList.toggle('active');
+    }
+
+    function handleSubmit(event) {
+      event.preventDefault();
+
+      const form = event.target;
+      const formData = new FormData(form);
+      const responseMessage = document.getElementById('responseMessage');
+
+      // Simulate form submission (in a real implementation, this would send data to a server)
+      const submitButton = form.querySelector('.submit-button');
+      submitButton.textContent = 'Sending...';
+      submitButton.disabled = true;
+
+      setTimeout(() => {
+        // Show success message
+        responseMessage.className = 'response-message success-message';
+        responseMessage.textContent = 'Thank you for your message! We\'ll get back to you within 24-48 hours.';
+        responseMessage.style.display = 'block';
+
+        // Reset form
+        form.reset();
+        submitButton.textContent = 'Send Message';
+        submitButton.disabled = false;
+
+        // Hide message after 5 seconds
+        setTimeout(() => {
+          responseMessage.style.display = 'none';
+        }, 5000);
+      }, 1500);
+
+      // In a real implementation, you would send the data to your server:
+      /*
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.get('name'),
+          email: formData.get('email'),
+          subject: formData.get('subject'),
+          message: formData.get('message')
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          responseMessage.className = 'response-message success-message';
+          responseMessage.textContent = 'Thank you for your message! We\'ll get back to you soon.';
+        } else {
+          responseMessage.className = 'response-message error-message';
+          responseMessage.textContent = 'Sorry, there was an error sending your message. Please try again.';
+        }
+        responseMessage.style.display = 'block';
+        submitButton.textContent = 'Send Message';
+        submitButton.disabled = false;
+      })
+      .catch(error => {
+        responseMessage.className = 'response-message error-message';
+        responseMessage.textContent = 'Sorry, there was an error sending your message. Please try again.';
+        responseMessage.style.display = 'block';
+        submitButton.textContent = 'Send Message';
+        submitButton.disabled = false;
+      });
+      */
+    }
+  </script>
+</body>
+</html>

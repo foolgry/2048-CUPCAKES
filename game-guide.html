@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2048 Cupcakes Game Guide - Tips, Tricks & Strategies</title>
+  <meta name="description" content="Master 2048 Cupcakes with our comprehensive game guide. Learn the best strategies, tips, and tricks to reach the ultimate 2048 cupcake!">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://2048cupcakes.top/game-guide.html" />
+  <link rel="stylesheet" href="style/landing.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .guide-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: var(--card-background);
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .guide-container h1 {
+      color: var(--primary-color);
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    .guide-container h2 {
+      color: var(--secondary-color);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    .guide-container h3 {
+      color: var(--accent-color);
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+    .guide-container p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+    }
+    .guide-container ul {
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+    }
+    .guide-container li {
+      margin-bottom: 0.5rem;
+    }
+    .back-button {
+      display: inline-block;
+      margin: 1rem 0;
+      padding: 0.8rem 1.5rem;
+      background: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .back-button:hover {
+      background: var(--accent-color);
+      transform: translateY(-2px);
+    }
+    .difficulty-box {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+    }
+    .strategy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .strategy-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .strategy-card:hover {
+      transform: translateY(-5px);
+    }
+    .strategy-card h3 {
+      color: var(--primary-color);
+      margin-top: 0;
+    }
+    .tips-list {
+      background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+    }
+    .tips-list h3 {
+      color: #2e7d32;
+      margin-top: 0;
+    }
+    .mistake-box {
+      background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+    }
+    .mistake-box h3 {
+      color: #c62828;
+      margin-top: 0;
+    }
+    .play-button {
+      display: inline-block;
+      margin: 1rem 0;
+      padding: 1rem 2rem;
+      background: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+    .play-button:hover {
+      background: var(--accent-color);
+      transform: translateY(-2px);
+    }
+    .cupcake-progression {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .cupcake-item {
+      text-align: center;
+      padding: 1rem;
+      background: linear-gradient(135deg, var(--background-color) 0%, #fff 100%);
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .cupcake-item:hover {
+      transform: scale(1.05);
+    }
+    .cupcake-emoji {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .cupcake-value {
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+    .highlight-tip {
+      background: var(--primary-color);
+      color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="guide-container">
+    <a href="index.html" class="back-button">← Back to Game</a>
+
+    <h1>🧁 Ultimate 2048 Cupcakes Strategy Guide</h1>
+
+    <p>Welcome to the comprehensive guide for mastering 2048 Cupcakes! Whether you're a beginner looking to understand the basics or an experienced player aiming for the legendary 2048 cupcake, this guide will help you improve your skills and reach new high scores.</p>
+
+    <div class="difficulty-box">
+      <h3>📈 Difficulty Levels</h3>
+      <p>2048 Cupcakes progresses through different challenge levels as you advance:</p>
+      <ul>
+        <li><strong>Beginner (2-64):</strong> Learn the basic mechanics and cupcake combinations</li>
+        <li><strong>Intermediate (128-512):</strong> Develop strategic thinking and pattern recognition</li>
+        <li><strong>Advanced (1024-2048):</strong> Master advanced techniques and achieve the ultimate goal</li>
+      </ul>
+    </div>
+
+    <h2>🎮 Game Basics</h2>
+
+    <h3>How to Play</h3>
+    <p>2048 Cupcakes follows the classic 2048 game mechanics with a sweet twist:</p>
+    <ul>
+      <li>Use arrow keys (↑ ↓ ← →) or swipe gestures to move cupcakes</li>
+      <li>When two identical cupcakes touch, they merge into one with double the value</li>
+      <li>After each move, a new cupcake appears randomly on the board</li>
+      <li>The goal is to create the 2048 cupcake</li>
+      <li>Game ends when you can't make any more moves</li>
+    </ul>
+
+    <h3>Cupcake Progression</h3>
+    <p>As you play, you'll unlock increasingly elaborate cupcakes. Here's the progression path:</p>
+
+    <div class="cupcake-progression">
+      <div class="cupcake-item">
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">2</div>
+        <p>Basic Cupcake</p>
+      </div>
+      <div class="cupcake-item">
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">4</div>
+        <p>Simple Cupcake</p>
+      </div>
+      <div class="cupcake-item">
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">8</div>
+        <p>Chocolate Cupcake</p>
+      </div>
+      <div class="cupcake-item">
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">16</div>
+        <p>Vanilla Cupcake</p>
+      </div>
+      <div class="cupcake-item">
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">32</div>
+        <p>Strawberry Cupcake</p>
+      </div>
+      <div class="cupcake-item">
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">64</div>
+        <p>Lemon Cupcake</p>
+      </div>
+      <div class="cupcake-item">
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">128</div>
+        <p>Rainbow Cupcake</p>
+      </div>
+      <div class="cupcake-item">
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">256</div>
+        <p>Deluxe Cupcake</p>
+      </div>
+      <div class="cupcake-item">
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">512</div>
+        <p>Premium Cupcake</p>
+      </div>
+      <div class="cupcake-item">
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">1024</div>
+        <p>Ultimate Cupcake</p>
+      </div>
+      <div class="cupcake-item">
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">2048</div>
+        <p>Legendary Cupcake</p>
+      </div>
+    </div>
+
+    <h2>🎯 Essential Strategies</h2>
+
+    <div class="strategy-grid">
+      <div class="strategy-card">
+        <h3>🏛️ Corner Strategy</h3>
+        <p>The most effective strategy for 2048 Cupcakes is to keep your highest-value cupcake in a corner (usually the bottom-right). This creates a predictable pattern and prevents high-value cupcakes from getting trapped.</p>
+        <ul>
+          <li>Choose one corner and stick with it</li>
+          <li>Build a "snake" pattern from your corner</li>
+          <li>Never move your highest cupcake out of the corner</li>
+        </ul>
+      </div>
+
+      <div class="strategy-card">
+        <h3>📏 Edge Management</h3>
+        <p>Keep your highest-value cupcakes along the edges of the board. This creates a barrier and prevents valuable cupcakes from getting stuck in the middle where they're harder to manage.</p>
+        <ul>
+          <li>Build along two adjacent edges</li>
+          <li>Gradually work toward the center</li>
+          <li>Maintain clear paths for merging</li>
+        </ul>
+      </div>
+
+      <div class="strategy-card">
+        <h3>🔄 Pattern Recognition</h3>
+        <p>Learn to recognize common patterns and sequences that lead to successful merges. The "S" pattern and "L" pattern are particularly effective for building high-value cupcakes.</p>
+        <ul>
+          <li>Identify merge opportunities early</li>
+          <li>Plan 2-3 moves ahead</li>
+          <li>Look for cascade opportunities</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>💡 Advanced Tips & Tricks</h2>
+
+    <div class="tips-list">
+      <h3>🏆 Pro Tips for High Scores</h3>
+      <ul>
+        <li><strong>Plan Ahead:</strong> Always think 2-3 moves in advance. Don't just make the obvious merge!</li>
+        <li><strong>Patience is Key:</strong> Don't rush. Sometimes the best move is to wait for the right opportunity.</li>
+        <li><strong>Master Two Directions:</strong> Focus on becoming proficient with two opposite directions (usually up and left).</li>
+        <li><strong>Control the Board:</strong> Try to keep the board organized rather than randomly scattered.</li>
+        <li><strong>Small Cupcakes Matter:</strong> Don't ignore low-value cupcakes - they're essential for building up to higher ones.</li>
+      </ul>
+    </div>
+
+    <div class="highlight-tip">
+      💡 <strong>Golden Rule:</strong> Never swipe down if you're using the bottom-right corner strategy unless absolutely necessary!
+    </div>
+
+    <h3>🧠 Pattern Techniques</h3>
+
+    <h4>The Snake Pattern</h4>
+    <p>Create a winding pattern that fills the board systematically. Start in your chosen corner and create a path that allows you to merge cupcakes efficiently without blocking future moves.</p>
+
+    <h4>The Staircase Method</h4>
+    <p>Build your cupcakes in ascending order from your corner, creating a staircase effect that makes merging predictable and controlled.</p>
+
+    <h4>The Edge Building Technique</h4>
+    <p>Focus on building high-value cupcakes along the edges first, then work your way toward the center. This prevents valuable cupcakes from getting trapped.</p>
+
+    <h2>❌ Common Mistakes to Avoid</h2>
+
+    <div class="mistake-box">
+      <h3>⚠️ Critical Mistakes</h3>
+      <ul>
+        <li><strong>Moving in All Directions:</strong> Avoid using all four arrow keys equally. Stick to your chosen pattern.</li>
+        <li><strong>Random Swiping:</strong> Don't swipe randomly hoping for the best. Every move should have a purpose.</li>
+        <li><strong>Ignoring Small Cupcakes:</strong> Don't focus only on high-value cupcakes. Small ones are building blocks!</li>
+        <li><strong>Poor Board Management:</strong> Don't let your board become too cluttered or disorganized.</li>
+        <li><strong>Rushing Moves:</strong> Take your time to think through each move carefully.</li>
+      </ul>
+    </div>
+
+    <h2>🎯 Level-Specific Strategies</h2>
+
+    <h3>🟢 Beginner Level (2-64)</h3>
+    <ul>
+      <li>Focus on understanding the basic merge mechanics</li>
+      <li>Practice building cupcakes in one corner</li>
+      <li>Learn to recognize simple merge opportunities</li>
+      <li>Don't worry too much about perfect strategy yet</li>
+    </ul>
+
+    <h3>🟡 Intermediate Level (128-512)</h3>
+    <ul>
+      <li>Implement the corner strategy consistently</li>
+      <li>Start planning 2-3 moves ahead</li>
+      <li>Practice edge management techniques</li>
+      <li>Learn to recover from difficult board states</li>
+    </ul>
+
+    <h3>🔴 Advanced Level (1024-2048)</h3>
+    <ul>
+      <li>Master complex pattern recognition</li>
+      <li>Develop board control techniques</li>
+      <li>Learn to optimize each move for maximum efficiency</li>
+      <li>Practice patience and strategic thinking</li>
+    </ul>
+
+    <h2>📊 Practice Drills</h2>
+
+    <h3>Daily Exercises</h3>
+    <ul>
+      <li><strong>Corner Challenge:</strong> Try to reach 128 keeping your highest cupcake always in the same corner</li>
+      <li><strong>Edge Building:</strong> Practice building high-value cupcakes along the edges only</li>
+      <li><strong>Pattern Repetition:</strong> Repeat specific patterns to build muscle memory</li>
+      <li><strong>Speed Runs:</strong> Practice making quick decisions under time pressure</li>
+    </ul>
+
+    <h2>🏅 Reaching 2048: The Final Push</h3>
+
+    <p>Reaching the legendary 2048 cupcake requires mastery of all these techniques combined:</p>
+    <ul>
+      <li><strong>Perfect Corner Control:</strong> Your 1024 and 512 cupcakes should be locked in your corner</li>
+      <li><strong>Board Organization:</strong> The rest of the board should be in a perfect gradient pattern</li>
+      <li><strong>Strategic Patience:</strong> Wait for the perfect opportunity to create the final merge</li>
+      <li><strong>Recovery Skills:</strong> Be able to recover from bad random cupcake spawns</li>
+    </ul>
+
+    <div class="highlight-tip">
+      🎯 <strong>Final Goal:</strong> To reach 2048, you need to build a perfect gradient from your 1024 cupcake down to the smallest cupcakes, with no gaps or misplacements.
+    </div>
+
+    <h2>🎮 Ready to Play?</h2>
+
+    <p>Now that you've learned the strategies and techniques, it's time to put them into practice! Remember that mastery comes with patience and repetition.</p>
+
+    <div style="text-align: center; margin: 2rem 0;">
+      <a href="index.html" class="play-button">🎮 Play 2048 Cupcakes Now!</a>
+    </div>
+
+    <h3>📚 Additional Resources</h3>
+    <p>Want to improve even more? Check out our other resources:</p>
+    <ul>
+      <li><a href="index.html">Play the Game</a></li>
+      <li><a href="contact-us.html">Contact Us for Tips</a></li>
+      <li><a href="about-us.html">Learn More About 2048 Cupcakes</a></li>
+    </ul>
+
+    <a href="index.html" class="back-button">← Back to Game</a>
+  </div>
+</body>
+</html>

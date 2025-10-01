@@ -7,6 +7,318 @@
     --card-background: #FFFFFF;
 }
 
+/* Cookie Consent Banner Styles */
+.cookie-consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, rgba(255, 105, 180, 0.95) 0%, rgba(255, 20, 147, 0.95) 100%);
+    color: white;
+    padding: 1.5rem;
+    z-index: 10000;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    display: none;
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.cookie-message h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.cookie-message p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.cookie-message a {
+    color: white;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cookie-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cookie-btn.accept {
+    background: white;
+    color: var(--primary-color);
+}
+
+.cookie-btn.accept:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255,255,255,0.3);
+}
+
+.cookie-btn.reject {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: 2px solid white;
+}
+
+.cookie-btn.reject:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+}
+
+.cookie-btn.settings {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: 2px solid rgba(255,255,255,0.5);
+}
+
+.cookie-btn.settings:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+}
+
+/* Cookie Settings Modal */
+.cookie-modal {
+    display: none;
+    position: fixed;
+    z-index: 10001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+}
+
+.cookie-modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cookie-modal-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cookie-modal-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.close-modal:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.cookie-modal-body {
+    padding: 2rem;
+}
+
+.cookie-category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cookie-category:last-child {
+    border-bottom: none;
+}
+
+.cookie-category h4 {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.cookie-category p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+    max-width: 70%;
+}
+
+.cookie-modal-footer {
+    padding: 1.5rem 2rem;
+    background: #f8f9fa;
+    border-radius: 0 0 15px 15px;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.cookie-btn.save {
+    background: var(--primary-color);
+    color: white;
+}
+
+.cookie-btn.save:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.cookie-btn.accept-all {
+    background: #28a745;
+    color: white;
+}
+
+.cookie-btn.accept-all:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+/* Toggle Switch */
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+input:disabled + .slider {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cookie-buttons {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .cookie-btn {
+        flex: 1;
+        min-width: 120px;
+    }
+
+    .cookie-modal-content {
+        margin: 2% auto;
+        width: 95%;
+    }
+
+    .cookie-category {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .cookie-category p {
+        max-width: 100%;
+    }
+
+    .cookie-modal-footer {
+        flex-direction: column;
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -220,20 +532,31 @@ footer {
     /* 将断点从 1024px 提高到 1200px */
     .hero-split {
         flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 1rem;
     }
 
     .content-left {
         position: relative;
         height: auto;
-        min-height: 600px;
+        min-height: 500px;
         top: 0;
         min-width: 100%;
-        /* 在响应式布局下占满容器宽度 */
+        max-width: 600px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 2rem auto;
     }
 
     .content-right {
         padding: 1.5rem;
         gap: 2rem;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
     }
 
     .features-grid {
@@ -258,6 +581,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
     .content-right {
         padding: 1rem;
     }
@@ -273,12 +600,99 @@ footer {
     }
 
     .game-wrapper {
-        height: 600px;
-        max-height: 80vh;
+        height: auto;
+        min-height: 450px;
+        max-height: 70vh;
+        margin: 1rem auto;
     }
 
     .cta-buttons {
         max-width: 100%;
+    }
+
+    /* 移动端触摸优化 */
+    .play-full {
+        min-height: 44px;
+        font-size: 16px;
+        padding: 12px 20px;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .play-button {
+        min-height: 44px;
+        font-size: 16px;
+        padding: 12px 20px;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* 移动端品牌区域 */
+    .brand {
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* 移动端标题优化 */
+    h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    /* 移动端特性卡片 */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .feature-card {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    /* 移动端步骤 */
+    .step {
+        padding: 1rem;
+        text-align: center;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* 移动端统计 */
+    .quick-stats {
+        text-align: center;
+    }
+
+    .stat {
+        align-items: center;
+    }
+
+    /* 移动端Cookie横幅优化 */
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .cookie-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cookie-btn {
+        min-height: 44px;
+        padding: 12px 16px;
+        font-size: 14px;
     }
 }
 .play-full {
@@ -302,4 +716,82 @@ footer {
     width: 100vw;
     height: 100vh;
     background: white;
+}
+
+/* 移动端全屏样式 */
+.game-wrapper.mobile-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.game-wrapper.mobile-fullscreen .game-preview {
+    width: 100%;
+    height: 100%;
+    max-width: 100vh;
+    max-height: 100vw;
+    margin: auto;
+}
+
+.game-wrapper.mobile-fullscreen .game-overlay {
+    background: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0;
+    bottom: auto;
+    left: auto;
+}
+
+.game-wrapper.mobile-fullscreen .play-full {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* 移动端游戏容器优化 */
+@media (max-width: 768px) {
+    .game-wrapper {
+        height: auto;
+        min-height: 500px;
+        max-height: 80vh;
+        position: relative;
+        margin: 1rem auto;
+    }
+
+    .game-preview {
+        min-height: 500px;
+        max-height: 80vh;
+    }
+
+    .content-left {
+        position: relative;
+        top: 0;
+        height: auto;
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .game-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+        color: white;
+        text-align: center;
+    }
 }

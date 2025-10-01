@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - 2048 Cupcakes</title>
+  <meta name="description" content="Learn about 2048 Cupcakes, the sweetest puzzle adventure game. Discover our story, mission, and the team behind the game.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://2048cupcakes.top/about-us.html" />
+  <link rel="stylesheet" href="style/landing.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .about-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: var(--card-background);
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .about-container h1 {
+      color: var(--primary-color);
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    .about-container h2 {
+      color: var(--secondary-color);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    .about-container h3 {
+      color: var(--accent-color);
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+    .about-container p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+    }
+    .about-container ul {
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+    }
+    .about-container li {
+      margin-bottom: 0.5rem;
+    }
+    .back-button {
+      display: inline-block;
+      margin: 1rem 0;
+      padding: 0.8rem 1.5rem;
+      background: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .back-button:hover {
+      background: var(--accent-color);
+      transform: translateY(-2px);
+    }
+    .hero-section {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, var(--background-color) 0%, #fff 100%);
+      border-radius: 12px;
+    }
+    .hero-section .logo {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .stat-card {
+      text-align: center;
+      padding: 1.5rem;
+      background: linear-gradient(135deg, var(--background-color) 0%, #fff 100%);
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .stat-card:hover {
+      transform: translateY(-5px);
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    .stat-label {
+      color: var(--text-color);
+      font-weight: 500;
+    }
+    .mission-box {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+    .mission-box h2 {
+      color: #856404;
+      margin-top: 0;
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .value-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .value-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .value-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    .timeline {
+      position: relative;
+      margin: 3rem 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--primary-color);
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      position: relative;
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+    }
+    .timeline-item:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+    .timeline-content {
+      flex: 1;
+      padding: 1.5rem;
+      background: linear-gradient(135deg, var(--background-color) 0%, #fff 100%);
+      border-radius: 10px;
+      margin: 0 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .timeline-date {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primary-color);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .team-section {
+      margin: 3rem 0;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .team-member {
+      text-align: center;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+    .team-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      background: var(--primary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .team-name {
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    .team-role {
+      color: var(--secondary-color);
+      margin-bottom: 1rem;
+    }
+    .contact-cta {
+      text-align: center;
+      margin: 3rem 0;
+      padding: 2rem;
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+      color: white;
+      border-radius: 12px;
+    }
+    .contact-cta h2 {
+      color: white;
+      margin-top: 0;
+    }
+    .contact-cta a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-cta a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      .timeline::before {
+        left: 20px;
+      }
+      .timeline-item {
+        flex-direction: column !important;
+        margin-left: 40px;
+      }
+      .timeline-date {
+        left: 20px;
+        transform: translateX(-50%);
+      }
+      .timeline-content {
+        margin: 1rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="about-container">
+    <a href="index.html" class="back-button">← Back to Game</a>
+
+    <div class="hero-section">
+      <div class="logo">🧁</div>
+      <h1>About 2048 Cupcakes</h1>
+      <p>The Sweetest Puzzle Adventure That Combines Classic Gameplay with Delicious Fun!</p>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">1M+</div>
+        <div class="stat-label">Happy Players</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">4.9★</div>
+        <div class="stat-label">User Rating</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Cupcake Types</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">2024</div>
+        <div class="stat-label">Year Founded</div>
+      </div>
+    </div>
+
+    <div class="mission-box">
+      <h2>Our Mission</h2>
+      <p>At 2048 Cupcakes, we believe that learning and entertainment should go hand-in-hand. Our mission is to create engaging puzzle games that not only provide hours of fun but also help develop critical thinking skills, strategic planning, and problem-solving abilities.</p>
+      <p>We've taken the classic 2048 game that millions love and given it a sweet twist that appeals to players of all ages. By replacing numbers with delightful cupcakes, we've made the learning experience more visual, enjoyable, and accessible.</p>
+    </div>
+
+    <h2>Our Story</h2>
+    <p>2048 Cupcakes was born from a simple idea: what if we could make the addictive 2048 puzzle game even more delightful? As fans of the original game, we loved how it challenged our minds and improved our strategic thinking. But we wanted to create something that would appeal to a broader audience, including younger players and those who might be intimidated by pure numbers.</p>
+
+    <p>The concept was simple yet brilliant: replace the numbered tiles with beautifully designed cupcakes. Each cupcake represents a value, and as you merge identical cupcakes, you create increasingly elaborate and delicious-looking treats. This visual approach makes the game more intuitive and adds an element of fun that keeps players coming back for more.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>The Idea is Born</h3>
+          <p>Our founder, a passionate puzzle game enthusiast, noticed that many players found number-based games intimidating. The idea of using visual elements like cupcakes to make learning more accessible was conceived.</p>
+        </div>
+        <div class="timeline-date">Early 2024</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Development Begins</h3>
+          <p>Our small team of developers and designers started creating the first prototype. We focused on creating beautiful cupcake designs and ensuring smooth, responsive gameplay.</p>
+        </div>
+        <div class="timeline-date">Mid 2024</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Beta Launch</h3>
+          <p>We launched our beta version to a small group of players. The feedback was overwhelmingly positive, with players loving the visual approach and addictive gameplay.</p>
+        </div>
+        <div class="timeline-date">Late 2024</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Official Launch</h3>
+          <p>2048 Cupcakes officially launched, quickly gaining popularity among puzzle game enthusiasts and casual players alike. We hit our first 100,000 players within the first month!</p>
+        </div>
+        <div class="timeline-date">January 2025</div>
+      </div>
+    </div>
+
+    <h2>Our Values</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">🎯</div>
+        <div class="value-title">Accessibility</div>
+        <p>Making puzzle games enjoyable for everyone, regardless of age or skill level</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">🧠</div>
+        <div class="value-title">Education</div>
+        <p>Promoting cognitive development through fun and engaging gameplay</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">🎨</div>
+        <div class="value-title">Creativity</div>
+        <p>Bringing artistic design to traditional puzzle games</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">🤝</div>
+        <div class="value-title">Community</div>
+        <p>Building a supportive community of puzzle game enthusiasts</p>
+      </div>
+    </div>
+
+    <div class="team-section">
+      <h2>Meet Our Team</h2>
+      <p>Our small but dedicated team is passionate about creating the best puzzle gaming experience possible.</p>
+
+      <div class="team-grid">
+        <div class="team-member">
+          <div class="team-avatar">JD</div>
+          <div class="team-name">John Developer</div>
+          <div class="team-role">Lead Developer</div>
+          <p>Puzzle game enthusiast with 10+ years of experience in game development</p>
+        </div>
+
+        <div class="team-member">
+          <div class="team-avatar">SD</div>
+          <div class="team-name">Sarah Designer</div>
+          <div class="team-role">Creative Director</div>
+          <p>Passionate about creating beautiful and intuitive user interfaces</p>
+        </div>
+
+        <div class="team-member">
+          <div class="team-avatar">MG</div>
+          <div class="team-name">Mike Gamer</div>
+          <div class="team-role">Game Designer</div>
+          <p>Expert in puzzle game mechanics and player experience optimization</p>
+        </div>
+
+        <div class="team-member">
+          <div class="team-avatar">EC</div>
+          <div class="team-name">Emma Creator</div>
+          <div class="team-role">Content Manager</div>
+          <p>Ensuring our content is educational, engaging, and appropriate for all ages</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>What Makes 2048 Cupcakes Special?</h2>
+
+    <h3>🎮 Intuitive Gameplay</h3>
+    <p>The classic 2048 mechanics are easy to learn but challenging to master. Our visual approach makes it even more accessible for new players while maintaining the strategic depth that experienced players love.</p>
+
+    <h3>🧁 Beautiful Design</h3>
+    <p>Each cupcake is carefully designed to be both beautiful and functional. The progression from simple cupcakes to elaborate creations provides visual feedback that helps players understand their progress.</p>
+
+    <h3>📱 Cross-Platform</h3>
+    <p>Whether you're on a desktop computer, tablet, or smartphone, 2048 Cupcakes provides a seamless gaming experience optimized for your device.</p>
+
+    <h3>🏆 Educational Value</h3>
+    <p>While you're having fun merging cupcakes, you're also developing important cognitive skills like strategic planning, pattern recognition, and problem-solving.</p>
+
+    <h2>Looking to the Future</h2>
+    <p>We're constantly working to improve 2048 Cupcakes and expand our offerings. Our roadmap includes:</p>
+    <ul>
+      <li>New game modes and challenges</li>
+      <li>Multiplayer functionality</li>
+      <li>Additional themes and visual styles</li>
+      <li>Educational content and learning resources</li>
+      <li>Mobile apps for iOS and Android</li>
+    </ul>
+
+    <div class="contact-cta">
+      <h2>Get in Touch!</h2>
+      <p>Have questions, feedback, or ideas? We'd love to hear from you!</p>
+      <p><a href="contact-us.html">Contact Us</a> • <a href="mailto:hello@2048cupcakes.top">hello@2048cupcakes.top</a></p>
+    </div>
+
+    <a href="index.html" class="back-button">← Back to Game</a>
+  </div>
+</body>
+</html>
