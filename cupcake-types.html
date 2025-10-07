@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2048 Cupcakes Types | Complete Cupcake Collection Guide</title>
+  <meta name="description" content="Complete guide to all 2048 Cupcakes types and values. Learn about every cupcake from 2 to 2048, including their designs, rarity, and collection tips.">
+  <meta name="keywords" content="2048 cupcakes types, cupcake collection, 2048 cupcakes values, all cupcakes in 2048, cupcake guide, 2048 cupcakes chart">
+  <meta name="author" content="2048 Cupcakes Team">
+  <meta property="og:title" content="2048 Cupcakes Types | Complete Cupcake Collection Guide">
+  <meta property="og:description" content="Complete guide to all 2048 Cupcakes types and values. Learn about every cupcake in the collection.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://2048cupcakes.top/cupcake-types.html">
+  <meta property="og:image" content="https://2048cupcakes.top/images/cupcake-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="2048 Cupcakes Types - Complete Collection">
+  <meta name="twitter:description" content="Discover all 2048 Cupcakes types and their values. Complete collection guide with images and details.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://2048cupcakes.top/cupcake-types.html" />
+  <link rel="stylesheet" href="style/landing.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "2048 Cupcakes Types | Complete Cupcake Collection Guide",
+    "description": "Complete guide to all 2048 Cupcakes types and values. Learn about every cupcake from 2 to 2048, including their designs, rarity, and collection tips.",
+    "image": "https://2048cupcakes.top/images/cupcake-logo.png",
+    "author": {
+      "@type": "Organization",
+      "name": "2048 Cupcakes Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "2048 Cupcakes"
+    },
+    "datePublished": "2025-01-01T00:00:00Z",
+    "dateModified": "2025-01-01T00:00:00Z",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://2048cupcakes.top/cupcake-types.html"
+    },
+    "articleSection": "Cupcake Collection"
+  }
+  </script>
+
+  <style>
+    .cupcake-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: var(--card-background);
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .cupcake-container h1 {
+      color: var(--primary-color);
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    .cupcake-container h2 {
+      color: var(--secondary-color);
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      border-bottom: 3px solid var(--primary-color);
+      padding-bottom: 0.5rem;
+    }
+    .cupcake-container h3 {
+      color: var(--accent-color);
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    .cupcake-container p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+    }
+    .cupcake-container ul {
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+    }
+    .cupcake-container li {
+      margin-bottom: 0.6rem;
+      line-height: 1.6;
+    }
+    .back-button {
+      display: inline-block;
+      margin: 1rem 0;
+      padding: 0.8rem 1.5rem;
+      background: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .back-button:hover {
+      background: var(--accent-color);
+      transform: translateY(-2px);
+    }
+    .cupcake-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .cupcake-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cupcake-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .cupcake-card.common {
+      border-top: 4px solid #4caf50;
+    }
+    .cupcake-card.uncommon {
+      border-top: 4px solid #2196f3;
+    }
+    .cupcake-card.rare {
+      border-top: 4px solid #9c27b0;
+    }
+    .cupcake-card.epic {
+      border-top: 4px solid #ff9800;
+    }
+    .cupcake-card.legendary {
+      border-top: 4px solid #ff5722;
+    }
+    .cupcake-emoji {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+    .cupcake-value {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    .cupcake-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--secondary-color);
+      margin-bottom: 1rem;
+    }
+    .rarity-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: white;
+    }
+    .rarity-common { background: #4caf50; }
+    .rarity-uncommon { background: #2196f3; }
+    .rarity-rare { background: #9c27b0; }
+    .rarity-epic { background: #ff9800; }
+    .rarity-legendary { background: #ff5722; }
+    .cupcake-description {
+      color: var(--text-color);
+      margin: 1rem 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .collection-progress {
+      background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .collection-progress h3 {
+      color: #1565c0;
+      margin-top: 0;
+    }
+    .progress-bar {
+      width: 100%;
+      height: 30px;
+      background: #e0e0e0;
+      border-radius: 15px;
+      overflow: hidden;
+      margin: 1rem 0;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #4caf50, #8bc34a);
+      transition: width 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .stat-card {
+      background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+    .stat-label {
+      color: var(--text-color);
+      margin-top: 0.5rem;
+    }
+    .fun-facts {
+      background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+    .fun-facts h3 {
+      color: #e65100;
+      margin-top: 0;
+    }
+    .milestone-section {
+      background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+    .milestone-section h3 {
+      color: #6a1b9a;
+      margin-top: 0;
+    }
+    .tip-box {
+      background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+      border-left: 4px solid #4caf50;
+    }
+    .tip-box h3 {
+      color: #2e7d32;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="cupcake-container">
+    <a href="index.html" class="back-button">← Back to Game</a>
+
+    <h1>🧁 Complete 2048 Cupcakes Collection Guide</h1>
+    <p style="text-align: center; font-size: 1.2rem; color: var(--secondary-color);">
+      Discover every cupcake type in 2048 Cupcakes! From the simple vanilla cupcake to the legendary 2048 masterpiece, explore the complete collection with details about each design, rarity, and special characteristics.
+    </p>
+
+    <div class="collection-progress">
+      <h3>📊 Collection Overview</h3>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">11</div>
+          <div class="stat-label">Total Cupcake Types</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">2048</div>
+          <div class="stat-label">Highest Value</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">5</div>
+          <div class="stat-label">Rarity Tiers</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">∞</div>
+          <div class="stat-label">Possible Merges</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>🎯 Cupcake Collection by Value</h2>
+
+    <div class="cupcake-grid">
+      <!-- Basic Cupcakes (Common) -->
+      <div class="cupcake-card common">
+        <span class="rarity-badge rarity-common">Common</span>
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">2</div>
+        <div class="cupcake-name">Vanilla Dream</div>
+        <div class="cupcake-description">
+          The foundation of your cupcake journey. Simple, elegant vanilla frosting with rainbow sprinkles. Every great collection starts here!
+        </div>
+      </div>
+
+      <div class="cupcake-card common">
+        <span class="rarity-badge rarity-common">Common</span>
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">4</div>
+        <div class="cupcake-name">Chocolate Bliss</div>
+        <div class="cupcake-description">
+          Rich chocolate frosting topped with chocolate shavings. A classic favorite that's twice as delightful as vanilla.
+        </div>
+      </div>
+
+      <div class="cupcake-card common">
+        <span class="rarity-badge rarity-common">Common</span>
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">8</div>
+        <div class="cupcake-name">Strawberry Sweet</div>
+        <div class="cupcake-description">
+          Fresh strawberry frosting with a fresh strawberry on top. The perfect balance of sweet and tart.
+        </div>
+      </div>
+
+      <div class="cupcake-card common">
+        <span class="rarity-badge rarity-common">Common</span>
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">16</div>
+        <div class="cupcake-name">Lemon Zest</div>
+        <div class="cupcake-description">
+          Tangy lemon frosting with candied lemon peel. A refreshing twist that brightens up your collection.
+        </div>
+      </div>
+
+      <!-- Uncommon Cupcakes -->
+      <div class="cupcake-card uncommon">
+        <span class="rarity-badge rarity-uncommon">Uncommon</span>
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">32</div>
+        <div class="cupcake-name">Mint Chocolate</div>
+        <div class="cupcake-description">
+          Cool mint frosting drizzled with dark chocolate. A sophisticated combination that's worth the wait.
+        </div>
+      </div>
+
+      <div class="cupcake-card uncommon">
+        <span class="rarity-badge rarity-uncommon">Uncommon</span>
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">64</div>
+        <div class="cupcake-name">Red Velvet</div>
+        <div class="cupcake-description">
+          Luxurious red velvet frosting with cream cheese drizzle. A bakery classic that shows your dedication.
+        </div>
+      </div>
+
+      <!-- Rare Cupcakes -->
+      <div class="cupcake-card rare">
+        <span class="rarity-badge rarity-rare">Rare</span>
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">128</div>
+        <div class="cupcake-name">Rainbow Fantasy</div>
+        <div class="cupcake-description">
+          Spectacular rainbow swirl frosting with edible glitter. A true showstopper that demonstrates advanced skills.
+        </div>
+      </div>
+
+      <div class="cupcake-card rare">
+        <span class="rarity-badge rarity-rare">Rare</span>
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">256</div>
+        <div class="cupcake-name">Salted Caramel</div>
+        <div class="cupcake-description">
+          Gourmet caramel frosting with sea salt crystals and caramel drizzle. For the sophisticated collector.
+        </div>
+      </div>
+
+      <!-- Epic Cupcakes -->
+      <div class="cupcake-card epic">
+        <span class="rarity-badge rarity-epic">Epic</span>
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">512</div>
+        <div class="cupcake-name">Cookies & Cream</div>
+        <div class="cupcake-description">
+          Premium vanilla frosting loaded with crushed cookies and cream cheese frosting. An epic delight for dedicated players.
+        </div>
+      </div>
+
+      <div class="cupcake-card epic">
+        <span class="rarity-badge rarity-epic">Epic</span>
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">1024</div>
+        <div class="cupcake-name">Chocolate Galaxy</div>
+        <div class="cupcake-description">
+          Dark chocolate frosting with silver and gold edible stars. A cosmic masterpiece that's truly out of this world.
+        </div>
+      </div>
+
+      <!-- Legendary Cupcake -->
+      <div class="cupcake-card legendary">
+        <span class="rarity-badge rarity-legendary">Legendary</span>
+        <div class="cupcake-emoji">🧁</div>
+        <div class="cupcake-value">2048</div>
+        <div class="cupcake-name">Golden Crown</div>
+        <div class="cupcake-description">
+          The ultimate achievement! Golden frosting with diamond dust and an edible golden crown. Only the most skilled players can create this legendary masterpiece.
+        </div>
+      </div>
+    </div>
+
+    <h2>🎨 Rarity System Explained</h2>
+
+    <div class="milestone-section">
+      <h3>📈 Understanding Cupcake Rarity</h3>
+      <p>Each cupcake has a rarity tier based on its value and how difficult it is to obtain:</p>
+
+      <div class="cupcake-grid">
+        <div class="stat-card">
+          <div class="stat-number" style="color: #4caf50;">Common</div>
+          <div class="stat-label">Values 2-16<br>Easy to obtain<br>Foundation of collection</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" style="color: #2196f3;">Uncommon</div>
+          <div class="stat-label">Values 32-64<br>Requires strategy<br>Mid-game achievements</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" style="color: #9c27b0;">Rare</div>
+          <div class="stat-label">Values 128-256<br>Advanced skills needed<br>End-game preparation</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" style="color: #ff9800;">Epic</div>
+          <div class="stat-label">Values 512-1024<br>Expert level<br>Mastery demonstration</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" style="color: #ff5722;">Legendary</div>
+          <div class="stat-label">Value 2048<br>Ultimate achievement<br>True mastery</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>🎯 Collection Milestones</h2>
+
+    <div class="milestone-section">
+      <h3>🏆 Achievement Milestones</h3>
+      <p>Track your progress through these important collection milestones:</p>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">🌱</div>
+          <div class="stat-label"><strong>Beginner</strong><br>Collect first 4 cupcakes<br>Reach value 16</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">🌿</div>
+          <div class="stat-label"><strong>Enthusiast</strong><br>Collect 6 cupcakes<br>Reach value 64</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">🌳</div>
+          <div class="stat-label"><strong>Expert</strong><br>Collect 8 cupcakes<br>Reach value 256</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">🌟</div>
+          <div class="stat-label"><strong>Master</strong><br>Collect 10 cupcakes<br>Reach value 1024</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">👑</div>
+          <div class="stat-label"><strong>Legend</strong><br>Complete collection<br>Reach value 2048</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>💡 Collection Tips & Strategies</h2>
+
+    <div class="tip-box">
+      <h3>🎯 Pro Collection Tips</h3>
+      <ul>
+        <li><strong>Focus on Progress:</strong> Don't worry about collecting every cupcake immediately. Focus on reaching higher values first.</li>
+        <li><strong>Practice Corner Strategy:</strong> The corner method helps you consistently reach higher-value cupcakes.</li>
+        <li><strong>Learn Merge Patterns:</strong> Understanding how cupcakes combine helps you plan your collection strategy.</li>
+        <li><strong>Be Patient:</strong> Some cupcakes take time and practice to achieve. Don't rush your merges.</li>
+        <li><strong>Study the Board:</strong> Look for merge opportunities that will help you progress toward your collection goals.</li>
+      </ul>
+    </div>
+
+    <h2>🧮 Cupcake Mathematics</h2>
+
+    <div class="fun-facts">
+      <h3>📊 The Math Behind Cupcakes</h3>
+      <p>Understanding the mathematics can help you plan your collection better:</p>
+      <ul>
+        <li><strong>Exponential Growth:</strong> Each cupcake value doubles the previous one (2, 4, 8, 16, 32...)</li>
+        <li><strong>Merge Count:</strong> To reach 2048, you need exactly 1023 successful merges</li>
+        <li><strong>Board Space:</strong> With 16 spaces, the theoretical maximum is 2^15 = 32768</li>
+        <li><strong>Average Moves:</strong> Most players reach 2048 in 900-1100 moves</li>
+        <li><strong>Probability:</strong> Each spawn has a 90% chance of being a 2-value cupcake</li>
+      </ul>
+    </div>
+
+    <h2>🎮 Beyond 2048</h2>
+
+    <div class="milestone-section">
+      <h3>🚀 Advanced Collection Goals</h3>
+      <p>Once you've completed the basic collection, challenge yourself with these advanced goals:</p>
+      <ul>
+        <li><strong>Speed Run:</strong> Complete the collection in under 15 minutes</li>
+        <li><strong>Efficiency Master:</strong> Reach 2048 in under 900 moves</li>
+        <li><strong>Perfectionist:</strong> Complete the collection without ever moving your highest cupcake out of the corner</li>
+        <li><strong>Consistency King:</strong> Reach 2048 in 9 out of 10 games</li>
+        <li><strong>Beyond Legend:</strong> Try to reach 4096 or even 8192</li>
+      </ul>
+    </div>
+
+    <h2>🎨 Design Inspiration</h2>
+
+    <div class="fun-facts">
+      <h3>🍰 Behind the Designs</h3>
+      <p>Each cupcake design is carefully crafted to represent its value and rarity:</p>
+      <ul>
+        <li><strong>Color Progression:</strong> Colors become more vibrant and elaborate as values increase</li>
+        <li><strong>Decoration Complexity:</strong> Higher-value cupcakes feature more intricate decorations</li>
+        <li><strong>Visual Hierarchy:</strong> The design clearly shows which cupcakes are more valuable</li>
+        <li><strong>Theme Consistency:</strong> All designs follow a cohesive bakery theme</li>
+        <li><strong>Satisfaction Factor:</strong> Each new cupcake feels like a real achievement</li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <h3>🎓 Final Collection Advice</h3>
+      <p>Remember that 2048 Cupcakes is both a puzzle game and a collection game. The joy comes not just from reaching 2048, but from the journey of building your cupcake collection. Each merge brings you closer to completing this sweet collection!</p>
+    </div>
+
+    <div style="text-align: center; margin: 3rem 0;">
+      <a href="index.html" class="back-button" style="background: var(--accent-color); padding: 1rem 2rem; font-size: 1.1rem;">
+        🧁 Start Building Your Collection!
+      </a>
+    </div>
+
+    <h3>📚 Additional Resources</h3>
+    <ul>
+      <li><a href="game-guide.html">📖 Complete Strategy Guide</a></li>
+      <li><a href="2048-tips.html">💡 Quick Tips for Beginners</a></li>
+      <li><a href="2048-strategy.html">🏆 Advanced Techniques</a></li>
+      <li><a href="faq.html">❓ Collection FAQ</a></li>
+    </ul>
+
+    <a href="index.html" class="back-button">← Back to Game</a>
+  </div>
+</body>
+</html>

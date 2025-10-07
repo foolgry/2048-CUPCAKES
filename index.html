@@ -31,6 +31,58 @@
 </head>
 
 <body>
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <nav class="main-navigation">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <img src="images/cupcake-logo.png" alt="2048 Cupcakes" class="nav-logo">
+          <span class="nav-title">2048 Cupcakes</span>
+        </div>
+
+        <div class="nav-menu">
+          <div class="nav-item">
+            <a href="index.html" class="nav-link">🏠 Home</a>
+          </div>
+
+          <div class="nav-item">
+            <a href="index.html" class="nav-link">🧁 2048 Cupcakes</a>
+          </div>
+
+          <div class="nav-item">
+            <a href="game-guide.html" class="nav-link">📖 Guide</a>
+          </div>
+
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">📚 Resources <span class="dropdown-arrow">▼</span></a>
+            <div class="dropdown-menu">
+              <a href="game-guide.html" class="dropdown-item">📖 Game Guide</a>
+              <a href="2048-strategy.html" class="dropdown-item">🏆 Advanced Strategy</a>
+              <a href="2048-tips.html" class="dropdown-item">💡 Quick Tips</a>
+              <a href="cupcake-types.html" class="dropdown-item">🧁 Cupcake Collection</a>
+              <a href="faq.html" class="dropdown-item">❓ FAQ</a>
+            </div>
+          </div>
+
+          <div class="nav-item">
+            <a href="about-us.html" class="nav-link">👥 About</a>
+          </div>
+
+          <div class="nav-item">
+            <a href="contact-us.html" class="nav-link">📧 Contact</a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
   <!-- Main hero section with split layout -->
   <main class="hero-split">
     <div class="content-left">
@@ -59,6 +111,30 @@
           <a href="#learn-more" class="play-button secondary">Learn More</a>
         </div>
 
+        <!-- Learn More Section -->
+        <div id="learn-more" class="learn-more-section">
+          <h3>Discover More About 2048 Cupcakes</h3>
+          <p>2048 Cupcakes is more than just a game - it's a delightful puzzle experience that challenges your strategic thinking while satisfying your sweet tooth! With colorful cupcake designs and smooth gameplay, every move brings you closer to creating the ultimate 2048 cupcake.</p>
+          <div class="learn-more-features">
+            <div class="feature-item">
+              <span class="feature-icon">🎯</span>
+              <span>Strategic puzzle gameplay</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">🎨</span>
+              <span>Beautiful cupcake artwork</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">📱</span>
+              <span>Play on any device</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">🏆</span>
+              <span>Track your high scores</span>
+            </div>
+          </div>
+        </div>
+
         <div class="quick-stats">
           <div class="stat">
             <span class="number">1M+</span>
@@ -76,22 +152,22 @@
         <div class="features-grid">
           <div class="feature-card">
             <div class="icon">🧁</div>
-            <h4>Sweet Visuals</h4>
+            <h3>Sweet Visuals</h3>
             <p>Enjoy beautiful cupcake designs in 2048 Cupcakes, making every merge delightful</p>
           </div>
           <div class="feature-card">
             <div class="icon">🎮</div>
-            <h4>Addictive Gameplay</h4>
+            <h3>Addictive Gameplay</h3>
             <p>The classic 2048 mechanics you love, reimagined with delicious cupcakes</p>
           </div>
           <div class="feature-card">
             <div class="icon">🏆</div>
-            <h4>Daily Challenges</h4>
+            <h3>Daily Challenges</h3>
             <p>New 2048 Cupcakes challenges every day to test your skills</p>
           </div>
           <div class="feature-card">
             <div class="icon">🌟</div>
-            <h4>Special Combinations</h4>
+            <h3>Special Combinations</h3>
             <p>Discover unique cupcake combinations exclusive to 2048 Cupcakes</p>
           </div>
         </div>
@@ -123,11 +199,11 @@
         <h2>2048 Cupcakes</h2> <!-- 将h3改为h2 -->
         <p>The sweetest puzzle game ever!</p>
       </div>
-      <nav class="footer-links">
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms-of-service.html">Terms of Service</a>
-        <a href="contact-us.html">Contact Us</a>
-        <a href="cookie-policy.html">Cookie Policy</a>
+      <nav class="footer-links" style="display: flex; gap: 2rem;">
+        <a href="privacy-policy.html" style="margin-right: 1rem;">Privacy Policy</a>
+        <a href="terms-of-service.html" style="margin-right: 1rem;">Terms of Service</a>
+        <a href="contact-us.html" style="margin-right: 1rem;">Contact Us</a>
+        <a href="cookie-policy.html" style="margin-right: 1rem;">Cookie Policy</a>
         <a href="about-us.html">About Us</a>
       </nav>
         <p class="copyright">© 2025 2048 Cupcakes. All rights reserved.</p>
@@ -429,6 +505,57 @@
         gameWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const navMenu = document.querySelector('.nav-menu');
+      const mobileToggle = document.querySelector('.mobile-menu-toggle');
+
+      navMenu.classList.toggle('active');
+
+      // Animate hamburger menu
+      if (navMenu.classList.contains('active')) {
+        mobileToggle.querySelector('.hamburger-line:nth-child(1)').style.transform = 'rotate(45deg) translateY(8px)';
+        mobileToggle.querySelector('.hamburger-line:nth-child(2)').style.opacity = '0';
+        mobileToggle.querySelector('.hamburger-line:nth-child(3)').style.transform = 'rotate(-45deg) translateY(-8px)';
+      } else {
+        mobileToggle.querySelector('.hamburger-line:nth-child(1)').style.transform = 'none';
+        mobileToggle.querySelector('.hamburger-line:nth-child(2)').style.opacity = '1';
+        mobileToggle.querySelector('.hamburger-line:nth-child(3)').style.transform = 'none';
+      }
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const navMenu = document.querySelector('.nav-menu');
+      const mobileToggle = document.querySelector('.mobile-menu-toggle');
+
+      if (!event.target.closest('.nav-menu') && !event.target.closest('.mobile-menu-toggle')) {
+        navMenu.classList.remove('active');
+        mobileToggle.querySelector('.hamburger-line:nth-child(1)').style.transform = 'none';
+        mobileToggle.querySelector('.hamburger-line:nth-child(2)').style.opacity = '1';
+        mobileToggle.querySelector('.hamburger-line:nth-child(3)').style.transform = 'none';
+      }
+    });
+
+    // Handle dropdown clicks on mobile
+    document.querySelectorAll('.dropdown-toggle').forEach(function(toggle) {
+      if (window.innerWidth <= 768) {
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          const dropdownMenu = this.nextElementSibling;
+          const isActive = dropdownMenu.style.display === 'block';
+
+          // Close all other dropdowns
+          document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
+            menu.style.display = 'none';
+          });
+
+          // Toggle current dropdown
+          dropdownMenu.style.display = isActive ? 'none' : 'block';
+        });
+      }
+    });
   </script>
 </body>
 
